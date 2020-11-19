@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09 - Desafio</title>
+    <style>
+        body{
+            background-color: rgb(43, 42, 42);
+            color: white;
+            text-align: center;
+        }
+        h1{
+            text-shadow: 2px 2px rgb(109, 109, 108);
+            font-size: 36pt;
+            font-family: Verdana;
+        }
+        input#botao{
+            margin-left: 470px;
+        }
+        div#result{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificação de nativos</h1>
+    <label>Selecione o seu pais de origem:</label><select id="pais" required>
+        <optgroup label="America do Norte">
+            <option value="CA">Canadá</option>
+            <option value="US">Estados Unidos</option>
+        </optgroup>
+        <optgroup label="America do Sul">
+            <option value="AR">Argentina</option>
+            <option value="BO">Bolívia</option>
+            <option value="BR" selected>Brasil</option>
+            <option value="CL">Chile</option>
+            <option value="CO">Colômbia</option>
+            <option value="EC">Equador</option>
+            <option value="GY">Guiana</option>
+            <option value="PY">Paraguai</option>
+            <option value="PE">Peru</option>
+            <option value="SR">Suriname</option>
+            <option value="UY">Uruguai</option>
+            <option value="VE">Venezuela</option>
+        </optgroup>
+    </select>
+    <input id="botao" type="button" value="Verificar" onclick="verif()">
+    <div id="result">
+        Seu resultado aparecerá aqui!
+    </div>
+</body>
+    <script>
+        function verif(){
+            var p = window.document.getElementById('pais') // recebe as informações contidas na variavel 'pais'
+            var pais = p.options[p.selectedIndex].text // recebe o nome do nome do pais contido na opção selecionada
+            var result = window.document.getElementById('result') // Substitui os dados contido na div pelo resultado gerado
+            if(p.value == 'BR'){
+                result.innerHTML = `Você é nativo do ${pais}!`
+            }else{
+                result.innerHTML = `Você é um estrangueiro de ${pais}`
+            }
+        }
+    </script>
+</html>

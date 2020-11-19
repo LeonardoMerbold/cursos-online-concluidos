@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio nº4 - extra</title>
+    <style>
+        body{
+            color: magenta;
+            background: rgb(34, 0, 34);
+            font-size: 36pt;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var sal = Number.parseFloat(window.prompt('Digite seu salário: '))
+       // document.write(`Seu salário é de ${sal.toFixed(2).replace('.', ',')}`)
+        document.write(`Seu salário é de ${sal.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+      
+      //sal.toLocaleString('pt-BR', {style: 'currency', currency:'BRL' -> Reais
+      //sal.toLocaleString('pt-BR', {style: 'currency', currency:'USD' -> Dolares
+      //sal.toLocaleString('pt-BR', {style: 'currency', currency:'EUR' -> Euros
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(52, 25, 59);
+            color: rgb(255, 255, 255);
+            font: normal 18pt arial; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <!-- DOM (Document Object Model): Um conjunto de objetos dentro do seu navegador que dará acesso aos componentes internos do seu Web Site. Em outras palavras, uma permissão dada ao JavaScript para alterar,criar,remover e restringir componentes(elementos, atributos, estilos e eventos) do seu HTML-->
+    <div id='msg'>Clique em mim</div>
+    <script>
+        //window.document.write(window.document.charset)
+        //window.document.write(window.navigator.appName)
+        //window.document.write(window.document.URL)
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+            //window.document.write('Está escrito assim: ' + p1.innerText)
+            // document.write(p1.innerHTML) //Utiliza a formatação html do texto. Neste caso, a formatação do 'DOM'
+            //corpo.style.background = 'black'
+            //p1.style.color = 'blue'
+        var d = window.document.getElementById('msg') // O uso do 'window' é opcional.
+            d.style.background = 'green'
+            d.innerText = 'Estou Aguardando...' // Altera o conteúdo dentro da variavel 'd'.
+            //window.document.getElementById('msg').innerText = "Concluido!"
+        var q = window.document.querySelector('Div#msg') // Se for 'id' -> '#', caso seja 'class' -> '.'
+        q.style.color = 'yellow'
+
+        /* A seleção de elementos é possivel por:
+            - Marca -> getElementsBytagName()
+            - ID -> getElementById()
+            - Nome -> getElementsByName()
+            - Classe -> getElementsByclassName()
+            - Seletor -> querySelector() e querySelectorAll()
+        */
+    </script>
+</body>
+</html>

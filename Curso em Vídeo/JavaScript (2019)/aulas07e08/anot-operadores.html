@@ -1,0 +1,59 @@
+<!--  Revisão:
+            + Operadores aritméticos 
+                (+) -> Soma
+                (-) -> Subtração
+                (*) -> Multiplicação
+                (/) -> Divisão
+                (%) -> Resto
+                (**)-> Potência 
+
+                Precedência / Nivel hierarquico
+                    1º '()'
+                    2º '**'
+                    3º '*,/,%'
+                    4º '+,-'
+                    Obs: Caso o calculo apresente operadores pertencentes ao mesmo nível hierarquico, será efetuada por ordem(da esquerda pra direita).
+       
+            + Atribuição
+                Auto-atribuição simplificada
+                        Ex: 'n = n + 2' -> 'n += 2';
+
+                Auto-atribuição incremental
+                    Ex: 'n = 10' + 'n++' -> 'n = 11'
+                        'n = 10' - 'n--' -> 'n = 9'
+            
+            + Relacionais
+                (>) -> Maior
+                (<) -> Menor
+                (>=) -> Maior e igual
+                (<=) -> Menor e igual
+                (==) -> Igual
+                (!=) -> Diferente
+                (===) -> Identico
+
+                Obs: (5=='5' = True) Neste caso, apesar do tipo ser diferente, o valor é o mesmo. Porém:
+                     (5==='5' = False) pois, apesar de serem iguais, são de tipos diferentes, logo, não são identicos.
+
+            + Lógicos
+                (!) -> Negação
+                (&&) -> Conjunção
+                (||) -> Disjunção
+
+                Obs:    true && false = false
+                        false && true = false
+
+                        true || false = true
+                        false || true = true
+
+            + Precedência geral
+                1º Aritméticos
+                2º Relacionáis
+                3º Lógicos
+                   (1º !)
+                   (2º &&)
+                   (3º ||)
+
+            + Ternário
+                (? e :) -> Gerencia variaveis com consequencias binárias
+                ex: teste ? true : false - > nota>=7.0 ? 'Aprovado' : 'Reprovado'
+-->
